@@ -1,0 +1,49 @@
+stages:
+  prepare:
+    cmd: python prepare.py
+    deps:
+      - student_performance.csv
+      - prepare.py
+    params:
+      - random_seed
+      - data.sample_size
+    outs:
+      - data/processed/processed.csv
+
+  split:
+    cmd: python split.py
+    deps:
+      - data/processed/processed.csv
+      - split.py
+    params:
+      - random_seed
+      - data.test_size
+    outs:
+      - data/splits/train.csv
+      - data/splits/test.csv
+
+  train:
+    cmd: python train.py
+    deps:
+      - data/splits/train.csv
+      - train.py
+    params:
+      - random_seed
+      - model
+    outs:
+      - models/model.pkl
+      - models/preprocessing_pipeline.pkl
+      - models/label_encoder.pkl
+      - models/feature_cols.pkl
+
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+      - data/splits/test.csv
+      - models/model.pkl
+      - models/preprocessing_pipeline.pkl
+      - models/label_encoder.pkl
+      - models/feature_cols.pkl
+      - evaluate.py
+    outs:
+      - reports/metrics.json

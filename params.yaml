@@ -1,0 +1,11 @@
+random_seed: 42
+
+data:
+  sample_size: 40000
+  test_size: 0.2
+
+model:
+  n_estimators: 300
+  max_depth: 20
+  min_samples_split: 2
+  class_weight: balanced
