@@ -1,1 +1,10 @@
-/student_performance.csv
+models/model.pkl
+models/preprocessing_pipeline.pkl
+models/label_encoder.pkl
+models/feature_cols.pkl
+data/processed/
+data/splits/
+reports/metrics.json
+reports/
+*.pyc
+__pycache__/student_performance.csv
