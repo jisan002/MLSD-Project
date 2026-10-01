@@ -395,7 +395,7 @@ student-grade-prediction/
 Clone the repository:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone <https://github.com/jisan002/MLSD-Project>
 cd student-grade-prediction
 ```
 
