@@ -8,3 +8,4 @@ reports/metrics.json
 reports/
 *.pyc
 __pycache__/student_performance.csv
+/student_performance.csv

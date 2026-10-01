@@ -45,5 +45,5 @@ stages:
       - models/label_encoder.pkl
       - models/feature_cols.pkl
       - evaluate.py
-    outs:
+    metrics:
       - reports/metrics.json

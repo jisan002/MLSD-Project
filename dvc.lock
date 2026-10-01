@@ -58,7 +58,7 @@ stages:
     params:
       params.yaml:
         model:
-          n_estimators: 300
+          n_estimators: 100
           max_depth: 20
           min_samples_split: 2
           class_weight: balanced
@@ -74,8 +74,8 @@ stages:
       size: 263
     - path: models/model.pkl
       hash: md5
-      md5: ad54a8fed003b70cfcac335a927e2dd9
-      size: 398842348
+      md5: 9f0d7dc8220a0b205e525f2abac644f6
+      size: 132411915
     - path: models/preprocessing_pipeline.pkl
       hash: md5
       md5: 5b047266aa5c192af7fb08eba31cd0c1
@@ -101,8 +101,8 @@ stages:
       size: 263
     - path: models/model.pkl
       hash: md5
-      md5: ad54a8fed003b70cfcac335a927e2dd9
-      size: 398842348
+      md5: 9f0d7dc8220a0b205e525f2abac644f6
+      size: 132411915
     - path: models/preprocessing_pipeline.pkl
       hash: md5
       md5: 5b047266aa5c192af7fb08eba31cd0c1
@@ -110,5 +110,5 @@ stages:
     outs:
     - path: reports/metrics.json
       hash: md5
-      md5: 9be333742cb15557a40e423ef2f860e4
-      size: 256
+      md5: 3bdbcd05a82c18177261b5fb0766cee0
+      size: 254
